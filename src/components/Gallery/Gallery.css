@@ -51,8 +51,11 @@
 /* ---------------Gallery section------------------- */
 .gallery_intro{
     text-align: center;
-    
 }
+.gallery_intro h1{
+    margin:20px;
+}
+
 .gallery_container{
     margin: 50px;
     

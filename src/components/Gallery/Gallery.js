@@ -7,7 +7,7 @@ function Gallery() {
     return (
         <>
         <div className="gallery_intro">
-            <h1>Collection that reflects me </h1>
+            <h1>Pictures that reflects me </h1>
 
         </div>
         <div className="gallery_container"  >

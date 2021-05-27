@@ -11,7 +11,7 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(4, 4, 131); 
-    border-radius: 20px;
+    border-radius: 10px;
   }
   
   /* Handle on hover */
@@ -94,7 +94,17 @@ ul{
       font-size: 18px;
       padding:0px 100px 0px 100px;
     }
-
+/* .resume:before{
+  content: "view";
+  display:none;
+  color:white;
+  
+  font-size:15px;
+ 
+  padding:5px;
+  border-radius:  10px;
+  transition: all 0.5sec ease-out;
+} */
     .resume{
       border:none;
       margin-top: 20px;
@@ -102,7 +112,11 @@ ul{
       height:35px;
       width:auto;
       border-radius: 5px;
-    }    .resume a{
+    }    
+  .resume:hover:before{
+    display: inline;
+  }
+  .resume a{
       
       text-decoration: none;
       
@@ -138,8 +152,13 @@ ul{
         
     }
     }
-    @media screen and (max-width:400px){
+    @media screen and (max-width:500px){
       .home_image img, .about_image img{
         max-width: 350px;
+      }
+      .about_detail p {
+        border: 2px solid black;
+       padding:0px;
+        margin:30px;
       }
     }
