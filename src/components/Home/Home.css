@@ -138,3 +138,8 @@ ul{
         
     }
     }
+    @media screen and (max-width:400px){
+      .home_image img, .about_image img{
+        max-width: 350px;
+      }
+    }
