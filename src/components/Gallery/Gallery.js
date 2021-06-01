@@ -1,6 +1,7 @@
 import React from 'react'
 import Gcard from './Gcard'
-import pic1 from './1.jpg'
+import pic1 from './image1.jpg'
+import pic2 from './image2.jpg'
 import './Gallery.css'
 function Gallery() {
 
@@ -16,7 +17,7 @@ function Gallery() {
             <Gcard image={pic1} title="poonhill"/>
             </div>
           <div className="gallery">
-            <Gcard image={pic1} title="poonhill"/>
+            <Gcard image={pic2} title="Cloud Forest"/>
            </div>     
         </div>
         </>
