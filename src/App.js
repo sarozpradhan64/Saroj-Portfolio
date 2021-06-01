@@ -6,9 +6,12 @@ import Project from './components/Projects/Projects'
 import Blog from './components/Blogs/Blog'
 import Gallery from './components/Gallery/Gallery'
 import Footer from './components/footer'
+import {Lines}  from 'react-preloaders';
 function App() {
   return (
     <>
+    
+     
     <Router>
   
       <Navbar/>
@@ -22,9 +25,11 @@ function App() {
         
       </Switch>
       <Footer/>
-    
-   
+      
+      
     </Router>
+    
+    
     
     </>
   );
