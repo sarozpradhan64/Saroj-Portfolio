@@ -14,7 +14,7 @@ function Home() {
         <ul>
             <li>Web Developer</li>
             <li>Programmer/Coder</li>
-            <li>Student/Teacher(parttime)</li>
+            <li>Student/Teacher(part-time)</li>
         </ul>
         </div>
         <div className="home_image">
