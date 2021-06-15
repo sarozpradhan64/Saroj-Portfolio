@@ -1,28 +1,24 @@
-import React from 'react'
-import Gcard from './Gcard'
-import pic1 from './image1.jpg'
-import pic2 from './image2.jpg'
-import './Gallery.css'
+import React from "react";
+import Gcard from "./Gcard";
+import pic1 from "./image1.jpg";
+import pic2 from "./image2.jpg";
+import "./Gallery.css";
 function Gallery() {
-
-    return (
-        <>
-        <div className="gallery_intro">
-            <h1>Pictures that reflects me </h1>
-
+  return (
+    <>
+      <div className="gallery_intro">
+        <h1>Pictures that reflects me </h1>
+      </div>
+      <div className="gallery_container">
+        <div className="gallery">
+          <Gcard image={pic1} title="poonhill" />
         </div>
-        <div className="gallery_container"  >
-            
-            <div className="gallery">
-            <Gcard image={pic1} title="poonhill"/>
-            </div>
-          <div className="gallery">
-            <Gcard image={pic2} title="Cloud Forest"/>
-           </div>     
+        <div className="gallery">
+          <Gcard image={pic2} title="Cloud Forest" />
         </div>
-        </>
-       
-    )
+      </div>
+    </>
+  );
 }
 
-export default Gallery
+export default Gallery;

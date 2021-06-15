@@ -1,163 +1,156 @@
-*{
-	color: #24248f;
-	margin:0;
-	padding:0;
+* {
+  color: #24248f;
+  margin: 0;
+  padding: 0;
 
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-.navbar{
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
 
-	height: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.2rem;
-	position: sticky;
-	top:0;
-	
-	z-index: 20;
-/* 	background-color: #212038d8 !important;
+  z-index: 20;
+  /* 	background-color: #212038d8 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important; */
-	/*  The z-index property specifies the stack order of an element.
+  /*  The z-index property specifies the stack order of an element.
 An element with greater stack order is always in front of an element with a lower stack order. */
 }
- .change{
-	background-color: whitesmoke;
-	box-shadow: 0 20px 45px -15px rgba(0,111,255,0.6);
+.change {
+  background-color: whitesmoke;
+  box-shadow: 0 20px 45px -15px rgba(0, 111, 255, 0.6);
 
-	height: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.2rem;
-	position: sticky;
-	top:0;
-	z-index: 20;}
-
-.nav-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 80px;
-	max-width: 1500px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
-.nav-logo{
-	display: flex;
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+}
 
-	list-style: none;
-	text-align: center;
-	margin-left: 20px;
-	font-size: 2rem;
-	flex-grow: 1;
-/* For example, if all items have flex-grow set to 1, 
+.nav-logo {
+  display: flex;
+
+  list-style: none;
+  text-align: center;
+  margin-left: 20px;
+  font-size: 2rem;
+  flex-grow: 1;
+  /* For example, if all items have flex-grow set to 1, 
 every child will set to an equal size inside the container. 
 If you were to give one of the children a value of 2, 
 that child would take up twice as much space as the others */
-
 }
-.logo{
-	cursor:pointer; 
-	text-decoration: none;
+.logo {
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.nav-menu{
-
-	display: flex; /* flex made list horizontal */
-	list-style: none;
-	text-align:center;
-	margin-right: 2rem;
-	flex-grow: 0;
+.nav-menu {
+  display: flex; /* flex made list horizontal */
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+  flex-grow: 0;
 }
 
 .nav-links {
-	text-decoration: none;
-	padding: 5px 10px;
-	height: 100%;
-	border-bottom: 3px solid transparent;
+  text-decoration: none;
+  padding: 5px 10px;
+  height: 100%;
+  border-bottom: 3px solid transparent;
 }
 
 .fa-code {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 
-.nav-item{
-	line-height: 40px; /*  The line-height property specifies the height of a line. */
-	margin-right: 10px;
-	
+.nav-item {
+  line-height: 40px; /*  The line-height property specifies the height of a line. */
+  margin-right: 10px;
 }
-.nav-item:after { /* for underline while hover */
-	content: "";
-	display: block;
-	height: 2px;
-	width: 0;
-	background: transparent;
-	transition: width 0.7s ease, background-color 0.5s ease;
+.nav-item:after {
+  /* for underline while hover */
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #24248f;
+}
+
+.nav-item .active {
+  background-color: #24248f;
+  color: white;
+  border-radius: 5px;
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  /* making responsive */
+  .nav-menu {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    height: 100%;
+    position: fixed;
+    top: 80px;
+    left: -120%;
+    opacity: 1;
+    transition: all 0.4s ease; /* menu off, move to left  -110 */
   }
 
-  .nav-item:hover:after {
-	width: 100%;
-	background: #24248f;
+  .nav-menu.active {
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
   }
 
-  .nav-item .active{
-	  background-color:#24248f;
-	 color: white;
-	 border-radius: 5px;
-
+  .nav-item .active {
+    color: white;
+    border: none;
   }
-
-  .nav-icon{
-	  display: none;
+  .nav-links {
+    padding: 10px;
+    width: 100%;
+    display: table;
   }
-
-@media screen and (max-width: 960px){  /* making responsive */
-	.nav-menu{ 
-				background-color: white;
-		display: flex;
-		flex-direction: column;
-		width:100%;
-		
-		height: 100%;
-		position: fixed;
-		top: 80px;
-		left: -120%; 
-		opacity: 1;
-		transition: all 0.4s ease; /* menu off, move to left  -110 */ 
-	}
-
-	.nav-menu.active {
-		
-	
-		left: 0px;
-		opacity: 1;
-		transition: all 0.5s ease;
-		z-index: 1;
-	  }
-
-	  .nav-item .active {
-		
-		color: white;
-		border: none;
-	  }
-	  .nav-links {
-		padding: 10px;
-		width: 100%;
-		display: table;
-	  }
-	  .nav-icon {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translate(-100%, 60%);
-		font-size: 1.8rem;
-		cursor: pointer;
-		}
-
-		
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 }
