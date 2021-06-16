@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./footer.css";
 
 function Footer() {
@@ -9,7 +10,9 @@ function Footer() {
   };
   return (
     <div className="footer">
-      <ul className="footer_menu">
+      <div className="footer_menu">
+        <div className="settings">settings</div>
+       <ul className="social_media">
         <li className="footer_links">
           <a
             href="https://www.instagram.com/srz.prdhnn/"
@@ -37,7 +40,14 @@ function Footer() {
             <i class="fab fa-github-square"></i>
           </a>
         </li>
-      </ul>
+        
+        </ul>
+        <div className="contact_button">
+        <NavLink exact to="/contact" activeClassName="active" 
+        className="contact_link" >Contact</NavLink>
+        </div>
+      </div>
+     
     </div>
   );
 }
