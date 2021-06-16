@@ -3,7 +3,7 @@ import './contact.css'
 function Form() {
     return (
         <div>
-            <form method="POST" data-netlify="true">
+            <form method="POST" netlify-honeypot="bot-field" hidden>
                 <input className="name" type="text" placeholder="Enter your name"/> 
                 <input type="text" placeholder="Phone number"/>
                 <input type="text" placeholder="Enter your email address"/>
