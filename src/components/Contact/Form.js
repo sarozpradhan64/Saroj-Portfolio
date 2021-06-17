@@ -22,7 +22,7 @@ function Form() {
           id="name"
           name="name"
           placeholder="Enter your name"
-          onChange={handleClick}
+          
           required
         />
         <input
