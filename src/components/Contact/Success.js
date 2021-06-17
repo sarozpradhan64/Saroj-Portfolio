@@ -6,7 +6,7 @@ function Success() {
         <div className="form_container">
             <p>Your message is sent successfully</p>
         <form method="POST"
-        action="/contact"name="contact"
+        action="contact" name="contact"
         action="/success"
         data-netlify="true" 
         onSubmit = "submit"

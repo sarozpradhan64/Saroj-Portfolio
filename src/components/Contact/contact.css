@@ -44,6 +44,7 @@ input:focus{
     border: 2px solid #24248f;
     border-radius: 5px;
     outline:none;
+    background-color: white;
 }
 .submit:hover{
     background-color: #24248f;
