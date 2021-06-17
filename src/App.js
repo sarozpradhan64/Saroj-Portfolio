@@ -6,7 +6,9 @@ import Project from "./components/Projects/Projects";
 import Blog from "./components/Blogs/Blog";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/footer";
-import  Form from "./components/Contact/Form"
+import  Form from "./components/Contact/Form";
+
+import Success from "./components/Contact/Success"
 function App() {
   return (
     <>
@@ -18,6 +20,7 @@ function App() {
           <Route path="/Blogs" component={Blog} />
           <Route path="/Gallery" component={Gallery} />
           <Route path="/contact" component={Form}/>
+          <Route path="/success" component={Success}/>
         </Switch>
         <Footer/>
       </Router>
