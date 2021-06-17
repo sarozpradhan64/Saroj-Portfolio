@@ -79,3 +79,16 @@ textarea{
     border-radius: 5px;
 
 }
+/* 
+sucess */
+
+.back{
+    text-decoration: none;
+    margin-top: 50px;
+    padding:10px;
+    background-color: #24248f;
+    color:white;
+    border-radius: 5px;
+
+
+}
