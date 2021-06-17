@@ -44,7 +44,7 @@ function Footer() {
         </ul>
         <div className="contact_button">
         <NavLink exact to="/contact" activeClassName="active" 
-        className="contact_link" >Contact</NavLink>
+        className="contact_link" >Contact me</NavLink>
         </div>
       </div>
      
