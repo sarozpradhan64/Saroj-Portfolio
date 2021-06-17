@@ -6,7 +6,7 @@ function Form() {
        <div className="form_container">
            
             <form name="contact"
-            method="POST"
+            
             action="/success"
             data-netlify="true" 
             onSubmit = "submit"
