@@ -1,3 +1,8 @@
 .blog_intro {
-  text-align: center;
+  height: 90vh;
+  display:flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  
 }
