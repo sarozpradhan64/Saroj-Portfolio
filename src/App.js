@@ -7,7 +7,7 @@ import Blog from "./components/Blogs/Blog";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/footer";
 import  Form from "./components/Contact/Form";
-
+import NotFoundpage from "./components/NotFoundpage";
 import Success from "./components/Contact/Success"
 function App() {
   return (
@@ -16,11 +16,12 @@ function App() {
         <Navbar/> {/* navbar and footer outside the switch tags means that they will be present in all the pages */}
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Projects" component={Project} />
-          <Route path="/Blogs" component={Blog} />
-          <Route path="/Gallery" component={Gallery} />
-          <Route path="/contact" component={Form}/>
-          <Route path="/success" component={Success}/>
+          <Route  exact path="/projects/" component={Project} />
+          <Route exact path="/blogs/" component={Blog} />
+          <Route exact path="/gallery/" component={Gallery} />
+          <Route exact path="/contact/" component={Form}/>
+          <Route exact path="/success/" component={Success}/>
+          <Route path="*" component={NotFoundpage} />
         </Switch>
         <Footer/>
       </Router>
