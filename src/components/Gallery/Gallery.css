@@ -42,15 +42,15 @@
 /* ---------------Gallery section------------------- */
 .gallery_intro {
   text-align: center;
-  border:2px solid black;
+  
 }
 .gallery_intro h1 {
-  margin: 20px;border:2px solid black;
+  
 }
 
 .gallery_container {
   margin: 50px;
-  border:2px solid black;
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
