@@ -1,0 +1,48 @@
+.blog_container{
+    border:2px solid black;
+    
+    
+}
+
+.blog_intro{
+    text-align: center;
+    border:2px solid black;
+    margin:20px;
+}
+
+.blog_nav{
+    border:2px solid black;
+    margin:20px;
+    text-align: center;
+}
+
+.blog_link{
+    text-decoration: none;
+    margin:10px
+}
+.featured{
+    border:2px solid black;
+    display:flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.blog_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:20px;
+}
+.blog_list{
+    margin:20px;
+    border:2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.blog{
+    display: flex;
+    border: 2px solid black;
+    
+}

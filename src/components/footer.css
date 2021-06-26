@@ -17,7 +17,7 @@
   padding-left: 20px;
   display: flex;
   color: white;
-  flex-grow: 1;
+  flex-grow: 2;
   text-align: left;
   font-size: 20px;
  
@@ -26,7 +26,7 @@
 .social_media {
   
   
-  flex-grow: 2;
+  flex-grow: 1;
   display: flex;
   list-style: none;
   color: white;
@@ -38,7 +38,7 @@
 
 .footer_links i {
   color: white;
-  margin:0px 20px 0px 20px;
+  margin:0px 10px 0px 10px;
 }
 
 .contact_button {
@@ -48,7 +48,7 @@
   justify-content: flex-end;
   color: white;
   
-  flex-grow: 1;
+  flex-grow: 2;
 }
 .contact_link {
   font-size: 20px;

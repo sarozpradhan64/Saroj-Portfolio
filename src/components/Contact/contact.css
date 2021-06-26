@@ -87,3 +87,23 @@ sucess */
   color: white;
   border-radius: 5px;
 }
+
+
+@media screen and (max-width: 500px) {
+
+form{
+  width: 90%;
+}
+input {
+  font-size: 18px;
+margin: 10px;
+width: 90%;
+}
+textarea {
+  font-size: 18px;
+margin: 10px;
+width:90%;
+
+}
+
+}
