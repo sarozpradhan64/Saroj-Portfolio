@@ -136,7 +136,7 @@
     margin:0;
     text-align: center;
   }
-
+  
 .blog_list{
   margin:20px;
 }
@@ -147,12 +147,9 @@
 @media screen and (max-width: 460px) {
 
 
-  .featured {
-    width: 70%;
-    margin:20px;
-    width: 400px;
-    
-  }
+.featured{
+  width: 350;
+}
   .blog{
     width: 350px;
   }
