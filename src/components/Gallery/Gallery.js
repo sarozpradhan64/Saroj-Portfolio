@@ -5,7 +5,7 @@ import pic2 from "./image2.jpg";
 import "./Gallery.css";
 function Gallery() {
   return (
-    <>
+    <div className="gallery_main">
       <div className="gallery_intro">
         <h1>Pictures that reflects me </h1>
       </div>
@@ -17,7 +17,7 @@ function Gallery() {
           <Gcard image={pic2} title="Cloud Forest" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

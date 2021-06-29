@@ -17,7 +17,7 @@ function Category(props) {
     const fetchData = async () => {
       try {
         const res = await axios.post(
-          "https://sarojpradhan.herokuapp.com/api/blog/category",
+          "https://blazesrz.pythonanywhere.com/api/blog/category",
           { category }, config
         );
         setBlogs(res.data);
@@ -39,29 +39,30 @@ function Category(props) {
 
     blogs.map((blogPost) => {
       return list.push(
-        <di>
+        <div className="blog"> 
           <p>{capitalizeFirstLetter(blogPost.category)}</p>
-          <p>{blogPost.title}</p>
+          <img
+            
+            src={`https://blazesrz.pythonanywhere.com/${blogPost.thumbnail}`}  /* because when doing console.log(blogs), it only recieved /django-summernote */
+          width="200px" height="300px"
+          />
+          <h3>{blogPost.title}</h3>
           <p>{blogPost.month}</p>
           <p>{blogPost.excerpt}</p>
-          <Link to={`/blog/${blogPost.slug}`} className="">
-            continue reading
+          <Link to={`/blog/${blogPost.slug}`} className="readmore">
+            Read more
           </Link>
-          <img
-            width="200"
-            height="250"
-            src={blogPost.thumbnail}
-            alt="thumbnail"
-          />
-        </di>
+       
+        </div>
       );
     });
-    console.log("lenght of list is " + list.length);
-    for (let i = 0; i < list.length; i += 2) {
+    console.log("this is category")
+   console.log(blogs)
+    for (let i = 0; i < list.length; i += 1) {
       result.push(
-        <div key={i}>
-          <div>{list[i]}</div>
-          <div>{list[i + 1]}</div>
+        <div key={i} className="blogcard">
+        {list[i]}
+          
         </div>
       );
     }
@@ -70,24 +71,27 @@ function Category(props) {
   };
 
   return (
-    <div>
-      <h1>{capitalizeFirstLetter(currentCategory)} category</h1>
-      <nav>
-        <Link className="" exact to="/category/">
+
+    <div className="blog_container">
+      <h1 className="blog_intro">{capitalizeFirstLetter(currentCategory)} category</h1>
+      <nav className="blog_nav">
+        <Link className="blog_link" exact to="/blog">
           All
         </Link>
-        <Link className="" to="/category/programming">
+        <Link className="blog_link" to="/category/programming">
           Programming
         </Link>
-        <Link className="" to="/category/web">
+        <Link className="blog_link" to="/category/web">
           Web
         </Link>
-        <Link className="" to="/category/Technology">
-          Technology
+        <Link className="blog_link" to="/category/computer">
+          Computer
         </Link>
       </nav>
 
+<div className="blog_list">
       {getCategoryBlogs()}
+      </div>
     </div>
   );
 }

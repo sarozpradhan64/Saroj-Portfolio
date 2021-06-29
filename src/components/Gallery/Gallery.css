@@ -40,17 +40,20 @@
 /* -------------------------------------------------------------- */
 
 /* ---------------Gallery section------------------- */
+.gallery_main{
+  margin-bottom: 100px;
+}
 .gallery_intro {
   text-align: center;
-  
+
 }
 .gallery_intro h1 {
-  
+  margin: 20px;
 }
 
 .gallery_container {
   margin: 50px;
-  
+ 
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -14,7 +14,7 @@ function Projects() {
     const image1 =" hello "
  */
   return (
-    <>
+    <div className="project_main">
       <div className="project_intro">
         <h1>Here are my Works </h1>
       </div>
@@ -29,7 +29,7 @@ function Projects() {
             <Card name={name1} detail={detail1} image={image1}/>
             </div> */}
       </div>
-    </>
+    </div>
   );
 }
 

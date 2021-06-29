@@ -12,7 +12,7 @@ function Blogdetail(props) {
 
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://sarojpradhan.herokuapp.com/api/blog/${slug}`);
+        const res = await axios.get(`https://blazesrz.pythonanywhere.com/api/blog/${slug}`);
         setBlog(res.data);
       } catch (err) {}
     };
@@ -29,12 +29,17 @@ function Blogdetail(props) {
   };
 
   return (
-    <div>
-      {blog.title}
-      <p>Category: {capitalizeFirstLetter( blog.category)}</p>
-      <div dangerouslySetInnerHTML={createBlog()}></div>
+    <div className="blog_detail">
+      <div className="blog_body">
+        <h1>
+      {blog.title}</h1>
+      
+      <i>Category: {capitalizeFirstLetter( blog.category)}</i>
       <h4>{blog.month}</h4>
-      <Link to="/blogs">back to blog</Link>
+      <div dangerouslySetInnerHTML={createBlog()}></div>
+      
+      <Link className="readmore" to="/blog">back to blog</Link>
+    </div>
     </div>
   );
 }

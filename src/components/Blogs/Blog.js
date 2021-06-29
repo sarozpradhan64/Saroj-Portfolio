@@ -12,7 +12,7 @@ function Blog() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          
+          "https://blazesrz.pythonanywhere.com/api/blog/featured"
         );
         setFeaturedBlog(res.data[0]);
       } catch (err) {}
@@ -25,7 +25,7 @@ function Blog() {
     const fetchBlogs = async () => {
       try {
         const res = await axios.get(
-          
+          "https://blazesrz.pythonanywhere.com/api/blog/"
         );
         setBlogs(res.data);
       } catch (err) {}
@@ -44,57 +44,52 @@ function Blog() {
 
     blogs.map((blogPost) => {
       return list.push(
+        /* blogcard */
         <div className="blog">
-          <div className="bog_title">
-            <strong className="">
-              {capitalizeFirstLetter(blogPost.category)}
-            </strong>
-            <h3>{blogPost.title}</h3>
+          <div className="">
+            <img src={blogPost.thumbnail} alt="thumbnail" />
+          </div>
+          <div className="">
+            <i className="">{capitalizeFirstLetter(blogPost.category)}</i>
+            <h3 style={{ marginTop: "10px" }}>{blogPost.title}</h3>
             <div>
               {blogPost.month} {blogPost.day}
             </div>
-            <p>{blogPost.excerpt}</p>
-            <Link to={`/blog/${blogPost.slug}`} className="stretched-link">
-              Continue reading
+            <p style={{ marginTop: "20px" }}>{blogPost.excerpt}</p>
+            <Link to={`/blog/${blogPost.slug}`} className="readmore">
+              Read more
             </Link>
-          </div>
-          <div className="">
-            <img
-              width="200"
-              height="250"
-              src={blogPost.thumbnail}
-              alt="thumbnail"
-            />
           </div>
         </div>
       );
     });
-    console.log("lenght of list is " + list.length);
-    for (let i = 0; i < list.length; i += 2) {
+
+    for (let i = 0; i < list.length; i += 1) {
       result.push(
-        <div
+        <div key={i} className="blogcard">
+          {list[i]}
+        </div>
+        /*   <div className="blog_list"
           key={i}
           style={{
-            display: "flex",
-            flexDirection: "row",
-            borderStyle: "solid",
-            margin:'40px'
+            
           }}
         >
-          <div >{list[i]}</div>
-          <div >{list[i + 1]}</div>
-        </div>
+          <div>{list[i]}</div>
+          <div>{list[i + 1]}</div>
+        </div> */
       );
     }
 
     return result;
   };
-
+  console.log("this is blog hae");
+  console.log(blogs);
   return (
     <div className="blog_container">
-      <h1 className="blog_intro">maintainance going on</h1>
+      <h1 className="blog_intro">Blogs</h1>
       <nav className="blog_nav">
-        <Link className="blog_link" exact to="/category/">
+        <Link className="blog_link" exact to="/blog/">
           All
         </Link>
         <Link className="blog_link" to="/category/programming">
@@ -103,27 +98,35 @@ function Blog() {
         <Link className="blog_link" to="/category/web">
           Web
         </Link>
-        <Link className="blog_link" to="/category/Technology">
-          Technology
+        <Link className="blog_link" to="/category/computer">
+          Computer
         </Link>
       </nav>
 
+      <h2 className="featured_heading">Featured Blog</h2>
       <div className="featured">
-        <div className="blog_title">
-          <h1>{featuredBlog.title}</h1>
+        
+        <img
+          style={{ marginTop: "20px" }}
+          src={featuredBlog.thumbnail}
+         
+        />
+        <i className="">{capitalizeFirstLetter(featuredBlog.category)}</i>
+        <div className="featured_title">
+          <h1 style={{ marginBottom: "20px", marginTop: "20px" }}>
+            {featuredBlog.title}
+          </h1>
           <p>{featuredBlog.excerpt}</p>
-          <Link to={`/blog/${featuredBlog.slug}`} className="">
-            continue reading
+          <Link to={`/blog/${featuredBlog.slug}`} className="readmore">
+            Read more
           </Link>
         </div>
-        <img
-          style={{}}
-          src={featuredBlog.thumbnail}
-          width="200px"
-          height="300px"
-        />
       </div>
-      {getBlogs()}
+
+      <div className="blog_heading">
+        <h2>All blogs</h2>
+      </div>
+      <div className="blog_list">{getBlogs()}</div>
     </div>
   );
 }

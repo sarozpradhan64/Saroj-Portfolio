@@ -52,8 +52,16 @@
 /* -------------------------------------------------------------- */
 
 /* ---------------project section------------------- */
+
+.project_main{
+ background-size: cover;
+ margin-bottom: 100px;
+}
 .project_intro {
   text-align: center;
+}
+.project_intro h1 {
+  margin: 20px;
 }
 .project_container {
   margin: 50px;

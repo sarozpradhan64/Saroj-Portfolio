@@ -26,15 +26,16 @@ function App() {
           <Route exact path="/gallery/" component={Gallery} />
           <Route exact path="/contact/" component={Form} />
           <Route exact path="/success/" component={Success} />
-          <Route exact path="/blogs" component={Blog} />
+          <Route exact path="/blog" component={Blog} />
           <Route exact path = "/category/:id" component={Category} />
           <Route exact path = '/blog/:id' component={Blogdetail}/>
           <Route path="*" component={NotFoundpage} />
 
-
+         
         </Switch>
         <Footer />
       </Router>
+     
     </>
   );
 }
