@@ -12,7 +12,7 @@ function Blog() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8001/api/blog/featured"
+          "https://blazesrz.pythonanywhere.com/api/blog/featured"
         );
         setFeaturedBlog(res.data[0]);
       } catch (err) {}
