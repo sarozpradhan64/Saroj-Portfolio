@@ -12,7 +12,7 @@ function Blog() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "https://blazesrz.pythonanywhere.com/api/blog/featured"
+          "http://localhost:8001/api/blog/featured"
         );
         setFeaturedBlog(res.data[0]);
       } catch (err) {}
@@ -34,7 +34,7 @@ function Blog() {
   }, []);
 
   const capitalizeFirstLetter = (word) => {
-    if (word) return word.charAt(0).toUpperCase() + word.slice(1);
+    if (word) return word.charAt(0).toUpperCase() + word.slice(1); /* this means all other string in word except 1st letter */
   };
 
   /*   loopfunction for all the blogs */

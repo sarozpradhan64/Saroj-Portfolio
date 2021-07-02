@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import home from "./home.svg";
 import "./Home.css";
 import home2 from "./Home2.svg";
+import axios from "axios";
 import resume from "./resume.pdf";
 function Home() {
+  const[ profiledata, setProfiledata] = useState([])
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          "https://blazesrz.pythonanywhere.com/api/profile"
+        );
+        setProfiledata(res.data[0]);
+      } catch (err) {}
+    };
+    fetchData();
+  }, []);
+
+
+
+
   return (
     <>
       <div className="main">
@@ -30,11 +48,10 @@ function Home() {
         <div className="about_detail">
           <h1>About me</h1>
           <p>
-            Hi, i am saroj pradhan. Currently pursuing my bachelor's degree in
-            Bsc. CSIT. And I love to geek out on computer and techs things.
+           {profiledata.about}
           </p>
           <button type="button" className="resume">
-            <a href={resume} target="_blank">
+            <a href={profiledata.resume} target="_blank">
               Resume
             </a>
           </button>
