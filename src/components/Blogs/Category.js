@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./blog.css";
 
 function Category(props) {
@@ -75,18 +75,18 @@ function Category(props) {
     <div className="blog_container">
       <h1 className="blog_intro">{capitalizeFirstLetter(currentCategory)} category</h1>
       <nav className="blog_nav">
-        <Link className="blog_link" exact to="/blog">
+      <NavLink activeClassName="blog_active" className="blog_link" exact to="/blog/">
           All
-        </Link>
-        <Link className="blog_link" to="/category/programming">
+        </NavLink>
+        <NavLink activeClassName="blog_active"  className="blog_link" to="/category/programming">
           Programming
-        </Link>
-        <Link className="blog_link" to="/category/web">
+        </NavLink>
+        <NavLink  activeClassName="blog_active" className="blog_link" to="/category/web">
           Web
-        </Link>
-        <Link className="blog_link" to="/category/computer">
+        </NavLink>
+        <NavLink activeClassName="blog_active" className="blog_link" to="/category/computer">
           Computer
-        </Link>
+        </NavLink>
       </nav>
 
 <div className="blog_list">

@@ -11,11 +11,19 @@
 .blog_nav {
   margin: 20px;
   text-align: center;
+ 
 }
 
 .blog_link {
   text-decoration: none;
   margin: 10px;
+}
+.blog_active {
+  
+  padding:5px 5px;
+  background-color: #24248f;
+  color: white;
+  border-radius: 5px;
 }
 /* featured post------------------------------------------ */
 .featured {

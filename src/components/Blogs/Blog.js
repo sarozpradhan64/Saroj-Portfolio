@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link , NavLink} from "react-router-dom";
+
 import axios from "axios";
 import "./blog.css";
 
@@ -57,9 +58,9 @@ function Blog() {
               {blogPost.month} {blogPost.day}
             </div>
             <p style={{ marginTop: "20px" }}>{blogPost.excerpt}</p>
-            <Link to={`/blog/${blogPost.slug}`} className="readmore">
+            <NavLink to={`/blog/${blogPost.slug}`} className="readmore">
               Read more
-            </Link>
+            </NavLink>
           </div>
         </div>
       );
@@ -90,18 +91,18 @@ console.log(blogs)
     <div className="blog_container">
       <h1 className="blog_intro">Blogs</h1>
       <nav className="blog_nav">
-        <Link className="blog_link" exact to="/blog/">
+        <NavLink activeClassName="blog_active" className="blog_link" exact to="/blog/">
           All
-        </Link>
-        <Link className="blog_link" to="/category/programming">
+        </NavLink>
+        <NavLink activeClassName="blog_active"  className="blog_link" to="/category/programming">
           Programming
-        </Link>
-        <Link className="blog_link" to="/category/web">
+        </NavLink>
+        <NavLink  activeClassName="blog_active" className="blog_link" to="/category/web">
           Web
-        </Link>
-        <Link className="blog_link" to="/category/computer">
+        </NavLink>
+        <NavLink activeClassName="blog_active" className="blog_link" to="/category/computer">
           Computer
-        </Link>
+        </NavLink>
       </nav>
 
       <h2 className="featured_heading">Featured Blog</h2>
