@@ -152,8 +152,5 @@ justify-content: center;
   .blog {
     width: 350px;
   }
-  .blog img,
-  .featured img {
-    width: 300px;
-  }
+ 
 }
