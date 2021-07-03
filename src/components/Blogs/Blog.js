@@ -100,7 +100,7 @@ console.log(blogs)
         <NavLink  activeClassName="blog_active" className="blog_link" to="/category/web">
           Web
         </NavLink>
-        <NavLink activeClassName="blog_active" className="blog_link" to="/category/computer">
+        <NavLink activeClassName="blog_active" className="blog_link" to="/category/techs">
           Techs
         </NavLink>
       </nav>
