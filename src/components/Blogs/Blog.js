@@ -28,6 +28,7 @@ function Blog() {
           "https://blazesrz.pythonanywhere.com/api/blog/"
         );
         setBlogs(res.data);
+        console.log(blogs)
       } catch (err) {}
     };
     fetchBlogs();
@@ -80,7 +81,7 @@ function Blog() {
         </div> */
       );
     }
-
+console.log(blogs)
     return result;
   };
   console.log("this is blog hae");

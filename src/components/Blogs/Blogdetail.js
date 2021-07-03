@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./blog.css";
 
-
 function Blogdetail(props) {
   const [blog, setBlog] = useState({});
 
@@ -13,33 +12,53 @@ function Blogdetail(props) {
     const fetchData = async () => {
       try {
         const res = await axios.get(`https://blazesrz.pythonanywhere.com/api/blog/${slug}`);
-        setBlog(res.data);
+        console.log(res.data)
+       
+    /*  res.data.content =  res.data.content.replace("img src=\"/django-summernote", "img src=\"http:127.0.0.1:8000/django-summernote"); */
+   
+       setBlog(res.data);
       } catch (err) {}
     };
 
     fetchData();
-  }, [props.match.params.id]); /* this id is received from the  <Route exact path = '/blog/:id' component={Blogdetail}/> */
+  }, [
+    props.match.params.id,
+  ]); /* this id is received from the  <Route exact path = '/blog/:id' component={Blogdetail}/> */
 
-  const createBlog = () => {
+   const createBlog = () => {
     return { __html: blog.content };
-  };
+  };  
+
+
+
+
+  
+
+
+  
+   console.log('oi chalyo ta' + blog.content)
+  
 
   const capitalizeFirstLetter = (word) => {
     if (word) return word.charAt(0).toUpperCase() + word.slice(1);
   };
 
+  console.log("detail");
+  console.log(blog.content);
+
   return (
     <div className="blog_detail">
       <div className="blog_body">
-        <h1>
-      {blog.title}</h1>
-      
-      <i>Category: {capitalizeFirstLetter( blog.category)}</i>
-      <h4>{blog.month}</h4>
-      <div dangerouslySetInnerHTML={createBlog()}></div>
-      
-      <Link className="readmore" to="/blog">back to blog</Link>
-    </div>
+        <h1>{blog.title}</h1>
+
+        <i>Category: {capitalizeFirstLetter(blog.category)}</i>
+        <h4>{blog.month}</h4>
+        <div dangerouslySetInnerHTML={createBlog()}></div>
+
+        <Link className="readmore" to="/blog">
+          back to blog
+        </Link>
+      </div>
     </div>
   );
 }
