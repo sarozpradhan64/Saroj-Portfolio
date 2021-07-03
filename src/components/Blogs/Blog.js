@@ -101,7 +101,7 @@ console.log(blogs)
           Web
         </NavLink>
         <NavLink activeClassName="blog_active" className="blog_link" to="/category/computer">
-          Computer
+          Techs
         </NavLink>
       </nav>
 
