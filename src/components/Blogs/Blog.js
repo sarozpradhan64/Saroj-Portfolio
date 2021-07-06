@@ -39,6 +39,12 @@ function Blog() {
     if (word) return word.charAt(0).toUpperCase() + word.slice(1); /* this means all other string in word except 1st letter */
   };
 
+  const Truncateforexcerpt = (word) =>
+  {
+    if (word) return word.slice(0, 150) + "..."
+  }
+
+
   /*   loopfunction for all the blogs */
   const getBlogs = () => {
     let list = [];
@@ -118,7 +124,7 @@ console.log(blogs)
           <h1 style={{ marginBottom: "20px", marginTop: "20px" }}>
             {featuredBlog.title}
           </h1>
-          <p>{featuredBlog.excerpt}</p>
+          <p>{Truncateforexcerpt(featuredBlog.content)}</p>
           <Link to={`/blog/${featuredBlog.slug}`} className="readmore">
             Read more
           </Link>
