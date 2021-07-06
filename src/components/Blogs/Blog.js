@@ -124,7 +124,7 @@ console.log(blogs)
           <h1 style={{ marginBottom: "20px", marginTop: "20px" }}>
             {featuredBlog.title}
           </h1>
-          <p>{Truncateforexcerpt(featuredBlog.content)}</p>
+          <p>{featuredBlog.content}</p>
           <Link to={`/blog/${featuredBlog.slug}`} className="readmore">
             Read more
           </Link>
