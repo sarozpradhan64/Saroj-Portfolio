@@ -56,8 +56,7 @@ function Category(props) {
         </div>
       );
     });
-    console.log("this is category")
-   console.log(blogs)
+
     for (let i = 0; i < list.length; i += 1) {
       result.push(
         <div key={i} className="blogcard">

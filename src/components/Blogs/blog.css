@@ -110,17 +110,35 @@ justify-content: center;
 }
 
 /* -------------------------blog details------------ */
+
+.blog_detail{
+ 
+  display:flex;
+justify-content: space-between;
+  flex-direction:row;
+}
+.comments{
+  border-radius: 10px;
+width: 350px;
+  background-color: rgb(212, 212, 230);
+}
 .blog_body {
+  background-color: rgb(212, 212, 230);
+  border-radius: 10px;
   display: flex;
+  
   align-items: center;
   flex-direction: column;
-  margin-top: 40px;
-  margin-left: 200px;
-  margin-right: 200px;
   padding: 20px;
   min-height: 100vh;
+  width: 700px;
+ 
 }
-
+.latest_posts{
+  background-color: rgb(212, 212, 230);
+width: 200px;
+border-radius: 10px;
+}
 @media screen and (max-width: 960px) {
   .blog_container {
     display: flex;

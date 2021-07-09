@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link , NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import axios from "axios";
 import "./blog.css";
@@ -12,10 +12,10 @@ function Blog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          "https://blazesrz.pythonanywhere.com/api/blog/featured"
-        );
+        const res = await axios.get("http://localhost:8000/api/blog/featured");
+        console.log(res.data[0])
         setFeaturedBlog(res.data[0]);
+      
       } catch (err) {}
     };
     fetchData();
@@ -25,25 +25,25 @@ function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get(
-          "https://blazesrz.pythonanywhere.com/api/blog/"
-        );
-        setBlogs(res.data);
-        console.log(blogs)
+        const res = await axios.get("/api/blog/");
+        console.log("checking res");
+        console.log(res);
+        setBlogs(res.data); /* data is default object of json  */
       } catch (err) {}
     };
     fetchBlogs();
   }, []);
 
   const capitalizeFirstLetter = (word) => {
-    if (word) return word.charAt(0).toUpperCase() + word.slice(1); /* this means all other string in word except 1st letter */
+    if (word)
+      return (
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ); /* this means all other string in word except 1st letter */
   };
 
-  const Truncateforexcerpt = (word) =>
-  {
-    if (word) return word.slice(0, 150) + "..."
-  }
-
+  const Truncate = (word) => {
+    if (word) return word.slice(0, 10) ;
+  };
 
   /*   loopfunction for all the blogs */
   const getBlogs = () => {
@@ -60,6 +60,7 @@ function Blog() {
           <div className="">
             <i className="">{capitalizeFirstLetter(blogPost.category)}</i>
             <h3 style={{ marginTop: "10px" }}>{blogPost.title}</h3>
+            
             <div>
               {blogPost.month} {blogPost.day}
             </div>
@@ -88,42 +89,55 @@ function Blog() {
         </div> */
       );
     }
-console.log(blogs)
+
     return result;
   };
-  console.log("this is blog hae");
-  console.log(blogs);
+
   return (
     <div className="blog_container">
       <h1 className="blog_intro">Blogs</h1>
       <nav className="blog_nav">
-        <NavLink activeClassName="blog_active" className="blog_link" exact to="/blog/">
+        <NavLink
+          activeClassName="blog_active"
+          className="blog_link"
+          exact
+          to="/blog/"
+        >
           All
         </NavLink>
-        <NavLink activeClassName="blog_active"  className="blog_link" to="/category/programming">
+        <NavLink
+          activeClassName="blog_active"
+          className="blog_link"
+          to="/category/programming"
+        >
           Programming
         </NavLink>
-        <NavLink  activeClassName="blog_active" className="blog_link" to="/category/web">
+        <NavLink
+          activeClassName="blog_active"
+          className="blog_link"
+          to="/category/web"
+        >
           Web
         </NavLink>
-        <NavLink activeClassName="blog_active" className="blog_link" to="/category/techs">
+        <NavLink
+          activeClassName="blog_active"
+          className="blog_link"
+          to="/category/techs"
+        >
           Techs
         </NavLink>
       </nav>
 
       <h2 className="featured_heading">Featured Blog</h2>
       <div className="featured">
-        
-        <img
-          style={{ marginTop: "20px" }}
-          src={featuredBlog.thumbnail}
-         
-        />
+        <img style={{ marginTop: "20px" }} src={featuredBlog.thumbnail} />
         <i className="">{capitalizeFirstLetter(featuredBlog.category)}</i>
         <div className="featured_title">
+
           <h1 style={{ marginBottom: "20px", marginTop: "20px" }}>
             {featuredBlog.title}
           </h1>
+          <p>Updated on: {Truncate (featuredBlog.updated)}</p>
           <p>{featuredBlog.excerpt}</p>
           <Link to={`/blog/${featuredBlog.slug}`} className="readmore">
             Read more
