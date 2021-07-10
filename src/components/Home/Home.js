@@ -3,7 +3,7 @@ import home from "./home.svg";
 import "./Home.css";
 import home2 from "./Home2.svg";
 import axios from "axios";
-import resume from "./resume.pdf";
+
 function Home() {
   const[ profiledata, setProfiledata] = useState([])
   
