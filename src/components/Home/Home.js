@@ -5,8 +5,8 @@ import home2 from "./Home2.svg";
 import axios from "axios";
 
 function Home() {
-  const[ profiledata, setProfiledata] = useState([])
-  
+  const [profiledata, setProfiledata] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,9 +18,6 @@ function Home() {
     };
     fetchData();
   }, []);
-
-
-
 
   return (
     <>
@@ -47,9 +44,7 @@ function Home() {
 
         <div className="about_detail">
           <h1>About me</h1>
-          <p>
-           {profiledata.about}
-          </p>
+          <p>{profiledata.about}</p>
           <button type="button" className="resume">
             <a href={profiledata.resume} target="_blank">
               Resume
