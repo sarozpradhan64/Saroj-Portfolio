@@ -19,7 +19,7 @@ function Navbar() {
    };
    window.addEventListener('scroll', Navcolor);
   return (
-    <>
+    
     <nav className={ navcolor ? 'change' : 'navbar'}>
     <div className="nav-container">
       <div className="nav-logo">
@@ -59,7 +59,7 @@ function Navbar() {
           </div>
     </div>
     </nav>
-</>
+
   )
 }
 

@@ -26,8 +26,7 @@ function Blog() {
     const fetchBlogs = async () => {
       try {
         const res = await axios.get("/api/blog/");
-        console.log("checking res");
-        console.log(res);
+        
         setBlogs(res.data); /* data is default object of json  */
       } catch (err) {}
     };
@@ -60,10 +59,7 @@ function Blog() {
           <div className="">
             <i className="">{capitalizeFirstLetter(blogPost.category)}</i>
             <h3 style={{ marginTop: "10px" }}>{blogPost.title}</h3>
-            
-            <div>
-              {blogPost.month} {blogPost.day}
-            </div>
+            <p className="excerpt">Updated on: {Truncate (blogPost.updated)}</p>
             <p style={{ marginTop: "20px" }}>{blogPost.excerpt}</p>
             <NavLink to={`/blog/${blogPost.slug}`} className="readmore">
               Read more
@@ -130,15 +126,15 @@ function Blog() {
 
       <h2 className="featured_heading">Featured Blog</h2>
       <div className="featured">
-        <img style={{ marginTop: "20px" }} src={featuredBlog.thumbnail} />
+        <img style={{ marginTop: "10px" }} src={featuredBlog.thumbnail} />
         <i className="">{capitalizeFirstLetter(featuredBlog.category)}</i>
         <div className="featured_title">
 
-          <h1 style={{ marginBottom: "20px", marginTop: "20px" }}>
+          <h1 style={{  marginTop: "10px" }}>
             {featuredBlog.title}
           </h1>
-          <p>Updated on: {Truncate (featuredBlog.updated)}</p>
-          <p>{featuredBlog.excerpt}</p>
+          <p className="excerpt">Updated on: {Truncate (featuredBlog.updated)}</p>
+          <p style={{ marginTop: "10px" }}>{featuredBlog.excerpt}</p>
           <Link to={`/blog/${featuredBlog.slug}`} className="readmore">
             Read more
           </Link>
