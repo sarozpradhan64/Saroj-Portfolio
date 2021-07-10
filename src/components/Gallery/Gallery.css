@@ -41,6 +41,7 @@
 
 /* ---------------Gallery section------------------- */
 .gallery_main{
+  min-height: 100vh;
   margin-bottom: 100px;
 }
 .gallery_intro {

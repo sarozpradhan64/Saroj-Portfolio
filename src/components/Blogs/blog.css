@@ -28,7 +28,7 @@
 /* featured post------------------------------------------ */
 .featured {
   display: flex;
-  width: 40%;
+  width: 700px;
   height: 550px;
   flex-direction: column;
   margin-top: 20px;
@@ -114,15 +114,21 @@ justify-content: center;
 .blog_detail{
  
   display:flex;
-justify-content: space-between;
+
   flex-direction:row;
 }
 .comments{
+  border:2px solid black;
+  flex-grow: 2;
   border-radius: 10px;
-width: 350px;
+
   background-color: rgb(212, 212, 230);
 }
 .blog_body {
+  margin-left:40px;
+  margin-right: 40px;
+  border:2px solid black;
+  flex-grow: 4;
   background-color: rgb(212, 212, 230);
   border-radius: 10px;
   display: flex;
@@ -131,12 +137,14 @@ width: 350px;
   flex-direction: column;
   padding: 20px;
   min-height: 100vh;
-  width: 700px;
+ 
  
 }
 .latest_posts{
+  border:2px solid black;
+  flex-grow: 2;
   background-color: rgb(212, 212, 230);
-width: 200px;
+
 border-radius: 10px;
 }
 @media screen and (max-width: 960px) {
