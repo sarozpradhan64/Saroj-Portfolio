@@ -123,7 +123,7 @@ justify-content: center;
   flex-direction:row;
 }
 .comments{
-  border:2px solid black;
+  
   flex-grow: 1.5;
   border-radius: 10px;
 
@@ -132,9 +132,9 @@ justify-content: center;
 .blog_body {
   margin-left:40px;
   margin-right: 40px;
-  border:2px solid black;
+  
   flex-grow: 4;
-  width: 0px;
+  
   background-color: rgb(212, 212, 230);
   border-radius: 10px;
   display: flex;
@@ -147,7 +147,7 @@ justify-content: center;
  
 }
 .latest_posts{
-  border:2px solid black;
+
   flex-grow: 1;
   background-color: rgb(212, 212, 230);
 
