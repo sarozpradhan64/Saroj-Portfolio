@@ -1,5 +1,4 @@
 import React from "react";
-import error from "./404.png";
 
 function NotFoundpage() {
   return (

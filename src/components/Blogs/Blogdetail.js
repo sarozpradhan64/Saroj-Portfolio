@@ -12,7 +12,7 @@ function Blogdetail(props) {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `/api/blog/${slug}`
+          `https://blazesrz.pythonanywhere.com/api/blog/${slug}`
         );
      
 

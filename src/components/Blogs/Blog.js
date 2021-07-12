@@ -12,7 +12,7 @@ function Blog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/blog/featured");
+        const res = await axios.get("https://blazesrz.pythonanywhere.com/api/blog/featured");
         console.log(res.data[0])
         setFeaturedBlog(res.data[0]);
       
@@ -25,7 +25,7 @@ function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("/api/blog/");
+        const res = await axios.get("https://blazesrz.pythonanywhere.com/api/blog/");
         
         setBlogs(res.data); /* data is default object of json  */
       } catch (err) {}
