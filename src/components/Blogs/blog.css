@@ -134,6 +134,7 @@ justify-content: center;
   margin-right: 40px;
   border:2px solid black;
   flex-grow: 4;
+  width: 0px;
   background-color: rgb(212, 212, 230);
   border-radius: 10px;
   display: flex;
@@ -172,9 +173,25 @@ border-radius: 10px;
   .blog_list {
     margin: 20px;
   }
-  .blog_body {
-    margin: 40px;
+
+
+  .blog_detail{
+    padding-left: 40px;
+    padding-right: 40px; 
+    flex-direction:column ;
+    
+
   }
+
+  .blog_body{
+    margin: 0;
+    order: -1;
+    width: 100%
+   ;
+    
+  }
+ 
+ 
 }
 @media screen and (max-width: 460px) {
   .featured {
