@@ -12,7 +12,7 @@ function Blog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/blog/featured");
+        const res = await axios.get("/api/blog/featured");
         console.log(res.data[0])
         setFeaturedBlog(res.data[0]);
       
