@@ -5,15 +5,15 @@ function Form() {
   return (
     <div className="form_container">
       <form
-        name="contact"
+        name="Contact me"
         action="/success"
         data-netlify="true"
         onSubmit="submit"
-       
+        data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div hidden>
-        
+          <input name="bot-field" />
         </div>
 
         <input
