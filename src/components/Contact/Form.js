@@ -15,14 +15,13 @@ function Form() {
         <div hidden>
           <input name="bot-field" />
         </div>
-        
+
         <input
           className="name"
           type="text"
           id="name"
           name="name"
           placeholder="Enter your name"
-          
           required
         />
         <input
@@ -43,6 +42,7 @@ function Form() {
           placeholder="Your message"
           required
         ></textarea>
+        <input style={{padding:10}} type="file" id="file" name="file" />
         <button className="submit" type="submit">
           Send
         </button>
