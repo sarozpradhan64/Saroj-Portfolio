@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./contact.css";
 import emailjs from "emailjs-com";
 import Success from "./Success";
+import { useCookies } from "react-cookie";
 function Form() {
+
+
   function sendEmail(e) {
    
-
-    emailjs
-      .sendForm("gmail", "template_94vaouj", e.target, "user_62jnS4jHOrdWu9kznFXvX")
+    emailjs.sendForm("gmail", "template_94vaouj", e.target, "user_62jnS4jHOrdWu9kznFXvX")
       .then(
         (result) => {
           console.log(result.text);
@@ -19,7 +20,7 @@ function Form() {
   }
   return (
     <div className="form_container">
-      <form className="contact-form" onSubmit={sendEmail} action="/success">
+      <form className="contact-form" action="/success">
         <input type="hidden" name="contact_number" />
         <div hidden>
          
@@ -31,6 +32,7 @@ function Form() {
           id="name"
           name="name"
           placeholder="Enter your name"
+        
           required
         />
         <input
