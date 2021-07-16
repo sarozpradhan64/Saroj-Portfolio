@@ -6,8 +6,8 @@ function Form() {
     <div className="form_container">
       <form
         name="Contact me"
-        action=""
-        data-netlify="true"
+      
+        netlify
         onSubmit="submit"
         data-netlify-honeypot="bot-field"
       >
