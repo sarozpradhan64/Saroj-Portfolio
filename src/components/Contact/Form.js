@@ -5,13 +5,12 @@ function Form() {
   return (
     <div className="form_container">
       <form
-        name="Contact me"
-      
-        netlify
+        name="contact"
+      data-netlify="true"
         onSubmit="submit"
-        data-netlify-honeypot="bot-field"
+
       >
-        <input type="hidden" name="form-name" value="Contact me" />
+        <input type="hidden" name="form-name" value="contact" />
         <div hidden>
           <input name="bot-field" />
         </div>
