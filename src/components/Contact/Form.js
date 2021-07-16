@@ -11,7 +11,7 @@ function Form() {
         onSubmit="submit"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="Contact me" />
         <div hidden>
           <input name="bot-field" />
         </div>
