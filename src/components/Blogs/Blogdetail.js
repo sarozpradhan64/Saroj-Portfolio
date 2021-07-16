@@ -40,7 +40,7 @@ function Blogdetail(props) {
 
   return (
     <div className="blog_detail">
-      <div className="comments">here is comment</div>
+     
 
       <div className="blog_body">
        {/*  <img width="600px" src={blog.thumbnail} /> */}
@@ -49,9 +49,9 @@ function Blogdetail(props) {
         <i>Category: {capitalizeFirstLetter(blog.category)}</i>
         <h4>{blog.month}</h4>
         <div dangerouslySetInnerHTML={createBlog()}></div>
-
+        <div className="comments">comments</div>
         <Link className="readmore" to="/blog">
-          back to blog
+          Back 
         </Link>
       </div>
       <div className="latest_posts">related posts</div>

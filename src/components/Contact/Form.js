@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import "./contact.css";
+import emailjs from "emailjs-com";
 import Success from "./Success";
 function Form() {
+  function sendEmail(e) {
+   
+
+    emailjs
+      .sendForm("gmail", "template_94vaouj", e.target, "user_62jnS4jHOrdWu9kznFXvX")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
   return (
     <div className="form_container">
-      <form
-        name="contact"
-      data-netlify="true"
-        onSubmit="submit"
-netlify-data="true"
-      >
-        <input type="hidden" name="form-name" value="contact" />
+      <form className="contact-form" onSubmit={sendEmail} action="/success">
+        <input type="hidden" name="contact_number" />
         <div hidden>
-          <input name="bot-field" />
+         
         </div>
 
         <input
@@ -41,7 +51,6 @@ netlify-data="true"
           placeholder="Your message"
           required
         ></textarea>
-        <input style={{padding:10}} type="file" id="file" name="file" />
         <button className="submit" type="submit">
           Send
         </button>
