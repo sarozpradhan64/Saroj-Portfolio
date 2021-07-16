@@ -8,7 +8,7 @@ function Form() {
         name="contact"
       data-netlify="true"
         onSubmit="submit"
-
+netlify-data="true"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div hidden>
