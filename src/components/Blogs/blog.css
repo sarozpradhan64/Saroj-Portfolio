@@ -73,9 +73,7 @@
   display: flex;
   flex-direction: column;
   /* blog card---------------------- */
-
   padding: 10px;
-
   width: 400px;
 
   /* margin-right: 20px;
@@ -98,10 +96,10 @@
 
 .blog_list {
   display: flex;
-
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  align-items: center;
 }
 /* .blogcard{
     border:2px solid blue;
@@ -153,7 +151,8 @@
   }
 
   .featured {
-    width: 75%;
+    width: 80%;
+ 
     margin: 20px;
   }
   .featured_heading {
@@ -161,10 +160,15 @@
     text-align: center;
   }
 .blog{
-  width:350px ;
+
 }
   .blog_list {
-    margin: 20px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+
   }
 
   .blog_detail {
