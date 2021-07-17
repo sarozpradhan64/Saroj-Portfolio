@@ -72,7 +72,7 @@ function Category(props) {
   return (
 
     <div className="blog_container">
-      <h1 className="blog_intro">{capitalizeFirstLetter(currentCategory)} category</h1>
+{/*       <h1 className="blog_intro">{capitalizeFirstLetter(currentCategory)} category</h1> */}
       <nav className="blog_nav">
       <NavLink activeClassName="blog_active" className="blog_link" exact to="/blog/">
           All

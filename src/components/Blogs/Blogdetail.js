@@ -46,10 +46,8 @@ function Blogdetail(props) {
       <div className="blog_body">
        {/*  <img width="600px" src={blog.thumbnail} /> */}
         <h1>{blog.title}</h1>
-
-        <i>Category: {capitalizeFirstLetter(blog.category)}</i>
         <h4>{blog.month}</h4>
-        <div dangerouslySetInnerHTML={createBlog()}></div>
+        <div className="content" dangerouslySetInnerHTML={createBlog()}></div>
         <div className="comments">comments</div>
         <Link className="readmore" to="/blog">
           Back 

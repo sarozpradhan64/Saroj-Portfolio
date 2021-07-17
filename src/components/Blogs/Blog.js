@@ -91,7 +91,7 @@ function Blog() {
 
   return (
     <div className="blog_container">
-      <h1 className="blog_intro">Blogs</h1>
+     
       <nav className="blog_nav">
         <NavLink
           activeClassName="blog_active"
