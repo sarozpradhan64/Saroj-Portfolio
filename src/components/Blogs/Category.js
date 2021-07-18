@@ -44,7 +44,7 @@ function Category(props) {
           <img
             
             src={`https://blazesrz.pythonanywhere.com/${blogPost.thumbnail}`}  /* because when doing console.log(blogs), it only recieved /django-summernote */
-          width="200px" height="300px"
+          
           />
           <h3>{blogPost.title}</h3>
           <p>{blogPost.month}</p>
