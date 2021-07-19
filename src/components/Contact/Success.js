@@ -5,7 +5,7 @@ import Form from "./Form";
 function Success() {
   return (
     <div className="form_container">
-      <form>
+      <form className="contact-form">
         <p style={{ fontSize: "20px" }}>Your message is sent successfully</p>
         <NavLink exact to="/contact" className="back">
           Back
