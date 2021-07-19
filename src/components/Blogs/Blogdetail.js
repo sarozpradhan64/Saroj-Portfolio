@@ -48,10 +48,14 @@ function Blogdetail(props) {
         <h1>{blog.title}</h1>
         <h4>{blog.month}</h4>
         <div className="content" dangerouslySetInnerHTML={createBlog()}></div>
-        <div className="comments">comments</div>
-        <Link className="readmore" to="/blog">
-          Back 
-        </Link>
+        <div className="comments">comments
+        <form className="commentform">
+          <textarea className="commentsection" >
+
+          </textarea>
+          <button className="readmore" type="submit" onSubmit={(e)=> e.preventDefault}>Send</button>
+        </form>
+        </div>
       </div>
       <div className="latest_posts">related posts</div>
     </div>
