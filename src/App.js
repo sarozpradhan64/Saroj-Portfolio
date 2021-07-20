@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Scrolltotop from "./Scrolltotop";
@@ -12,11 +12,28 @@ import Form from "./components/Contact/Form";
 import Success from "./components/Contact/Success";
 import Category from "./components/Blogs/Category";
 import Blogdetail from "./components/Blogs/Blogdetail";
-
+import { PropagateLoader } from "react-spinners";
+import './App.css'
 /* blog routes */
 function App() {
+
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []); 
+
   return (
     <>
+    {/* if ternary operator , if loading is true run <cliploader>
+else run <router>*/}
+    {loading ? (
+      <div className="loader">
+        <PropagateLoader size={15} color={"#24248f"} loading={loading} />
+      </div>
+    ) : (
       <Router>
         <Navbar />
          <Scrolltotop />
@@ -33,8 +50,10 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </>
-  );
+        )}
+        </>
+      );
+  
 }
 
 export default App;
