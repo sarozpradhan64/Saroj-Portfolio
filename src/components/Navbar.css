@@ -100,7 +100,7 @@ that child would take up twice as much space as the others */
   transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.nav-item:hover:after {
+.nav-item:not(.active):hover:not(.active):after  {
   width: 100%;
   background: #24248f;
 }

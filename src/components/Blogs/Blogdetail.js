@@ -46,16 +46,17 @@ function Blogdetail(props) {
       <div className="blog_body">
        {/*  <img width="600px" src={blog.thumbnail} /> */}
         <h1>{blog.title}</h1>
-        <h4>{blog.month}</h4>
+        <h4>{blog.month}{blog.day}</h4>
+        
         <div className="content" dangerouslySetInnerHTML={createBlog()}></div>
-        <div className="comments">comments
+        {/* <div className="comments">comments
         <form className="commentform">
           <textarea className="commentsection" >
 
           </textarea>
           <button className="readmore" type="submit" onSubmit={(e)=> e.preventDefault}>Send</button>
         </form>
-        </div>
+        </div> */}
       </div>
       <div className="latest_posts">related posts</div>
     </div>
