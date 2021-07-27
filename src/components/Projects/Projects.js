@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Card from "./Card";
 import "./Projects.css";
 import "./img2.svg";
@@ -15,6 +16,9 @@ function Projects() {
  */
   return (
     <div className="project_main">
+      <Helmet>
+  <title>Saroj | Projects</title>
+</Helmet>
       <div className="project_intro">
         <h1>Here are my Works </h1>
       </div>

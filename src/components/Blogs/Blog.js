@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+import {Helmet} from "react-helmet"
+
 import axios from "axios";
 import "./blog.css";
 
@@ -92,6 +94,9 @@ function Blog() {
   return (
     <div className="blog_container">
      
+<Helmet>
+  <title>Saroj | Blogs</title>
+</Helmet>
       <nav className="blog_nav">
         <NavLink
           activeClassName="blog_active"

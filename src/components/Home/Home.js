@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import home from "./home.svg";
 import "./Home.css";
 import home2 from "./Home2.svg";
@@ -22,6 +23,9 @@ function Home() {
   return (
     <>
       <div className="main">
+      <Helmet>
+  <title>Saroj | Portfolio</title>
+</Helmet>
         <div className="intro">
           <h1>Hi! I'm </h1>
           <h1>Saroj Pradhan</h1>
