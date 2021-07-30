@@ -45,7 +45,7 @@ function Blogdetail(props) {
      
      {/* ---------react_helmet-------------- */}
 <Helmet>
-<meta property="og:image" content={blog.thumbnail}/>
+{/* <meta property="og:image" content={blog.thumbnail}/> */}
 </Helmet>
 
       <div className="blog_body">
