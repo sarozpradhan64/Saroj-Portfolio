@@ -16,7 +16,6 @@ function Blogdetail(props) {
         const res = await axios.get(
           `https://blazesrz.pythonanywhere.com/api/blog/${slug}`
         );
-     
 
         /*  res.data.content =  res.data.content.replace("img src=\"/django-summernote", "img src=\"http:127.0.0.1:8000/django-summernote"); */
 
@@ -33,26 +32,26 @@ function Blogdetail(props) {
     return { __html: blog.content };
   };
 
-
-
   const capitalizeFirstLetter = (word) => {
     if (word) return word.charAt(0).toUpperCase() + word.slice(1);
   };
-
-
+  console.log("testing image");
+  console.log(blog.thumbnail);
   return (
     <div className="blog_detail">
-     
-     {/* ---------react_helmet-------------- */}
-<Helmet>
- <meta property="og:image" content={blog.thumbnail}/> 
-</Helmet>
+      {/* ---------react_helmet-------------- */}
+      <Helmet>
+        <meta property="og:image" content="https://media-exp3.licdn.com/dms/image/C5103AQH2JR5PotY4Lg/profile-displayphoto-shrink_800_800/0/1580995090423?e=1631145600&v=beta&t=QIYx9Wj8Xz8dAwMWqfOlKGZ8VK3Wntk09egz6m2d0yg" />
+      </Helmet>
 
       <div className="blog_body">
-       {/*  <img width="600px" src={blog.thumbnail} /> */}
+          <img width="600px" src={blog.thumbnail} /> 
         <h1>{blog.title}</h1>
-        <h4>{blog.month}{blog.day}</h4>
-        
+        <h4>
+          {blog.month}
+          {blog.day}
+        </h4>
+
         <div className="content" dangerouslySetInnerHTML={createBlog()}></div>
         {/* <div className="comments">comments
         <form className="commentform">
