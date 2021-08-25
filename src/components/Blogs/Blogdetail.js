@@ -45,7 +45,7 @@ function Blogdetail(props) {
       </Helmet>
 
       <div className="blog_body">
-          <img width="600px" src={blog.thumbnail} /> 
+          {/* <img width="600px" src={blog.thumbnail} />  */}
         <h1>{blog.title}</h1>
         <h4>
           {blog.month}
