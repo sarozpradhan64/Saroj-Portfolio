@@ -1,5 +1,5 @@
 * {
-  color: #24248f;
+
   margin: 0;
   padding: 0;
 
@@ -9,7 +9,7 @@
 .navbar {
   height: 80px;
   display: flex;
-
+color:#24248f;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -26,7 +26,7 @@ An element with greater stack order is always in front of an element with a lowe
 .change {
   background-color: whitesmoke;
   box-shadow: 0 20px 45px -15px rgba(0, 111, 255, 0.6);
-
+color: #24248f;
   z-index: 20;
   height: 80px;
   display: flex;
@@ -77,6 +77,7 @@ that child would take up twice as much space as the others */
 
 .nav-links {
   text-decoration: none;
+  color:#24248f;
   padding: 5px 10px;
   height: 100%;
   border-bottom: 3px solid transparent;

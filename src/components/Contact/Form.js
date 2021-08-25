@@ -27,7 +27,7 @@ function Form() {
         </div>
 
         <input
-          className="name"
+          className="input"
           type="text"
           id="name"
           name="name"
@@ -35,13 +35,13 @@ function Form() {
         
           required
         />
-        <input
+        <input  className="input"
           type="number"
           id="phone"
           name="phone"
           placeholder="Enter your Phone number"
         />
-        <input
+        <input  className="input"
           type="email"
           id="email"
           name="email"

@@ -15,7 +15,7 @@ import Blogdetail from "./components/Blogs/Blogdetail";
 import { PropagateLoader } from "react-spinners";
 import './App.css'
 /* blog routes */
-function App() {
+function App(props) {
 
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -25,8 +25,14 @@ function App() {
     }, 2500);
   }, []); 
 
+
+
+  var [darkmode, setDarkmode] = useState(false)
+
+
+
   return (
-    <>
+    <section className={darkmode ? "dark" : "light"}>
     {/* if ternary operator , if loading is true run <cliploader>
 else run <router>*/}
     {loading ? (
@@ -34,7 +40,9 @@ else run <router>*/}
         <PropagateLoader size={15} color={"#24248f"} loading={loading} />
       </div>
     ) : (
-      <Router>
+      <div>
+      <Router className={darkmode? "dark" :"light"}>
+        
         <Navbar />
          <Scrolltotop />
         <Switch>
@@ -50,8 +58,9 @@ else run <router>*/}
         </Switch>
         <Footer />
       </Router>
-        )}
-        </>
+     
+      </div>  )}
+        </section>
       );
   
 }

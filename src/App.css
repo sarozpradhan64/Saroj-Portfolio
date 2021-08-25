@@ -3,11 +3,19 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.loader{
-
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   height: 100vh;
+}
+.dark {
+  background-color: #070715;
+  text-decoration: aliceblue;
+  color: #24248f;
+}
+.light {
+  background-color: white;
+  color: #24248f;
 }
