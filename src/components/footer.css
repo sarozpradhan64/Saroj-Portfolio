@@ -3,11 +3,14 @@
 }
 .footer {
   height: 80px;
+  margin-top:150px;
   text-align: center;
   background-color: #24248f;
+
 }
 .light {
   background-color: black;
+  
 }
 .fa-sun {
   color: rgb(247, 141, 3);
@@ -21,6 +24,7 @@
   list-style: none;
   color: white;
   font-size: 30px;
+  transition: ;
 }
 
 /* --------------switch----------------- */
