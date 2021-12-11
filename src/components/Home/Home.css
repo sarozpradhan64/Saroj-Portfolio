@@ -197,7 +197,7 @@ ul {
     align-items: center;
   }
   .profession li {
-    width: 50%;
-    min-height: 100px;
+    width: 60%;
+    min-height: 150px;
   }
 }
