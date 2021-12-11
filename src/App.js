@@ -32,16 +32,16 @@ function App(props) {
 
 
   return (
-    <section className={darkmode ? "dark" : "light"}>
-    {/* if ternary operator , if loading is true run <cliploader>
-else run <router>*/}
-    {loading ? (
-      <div className="loader">
-        <PropagateLoader size={15} color={"#24248f"} loading={loading} />
-      </div>
-    ) : (
-      <div>
-      <Router className={darkmode? "dark" :"light"}>
+//     <section className={darkmode ? "dark" : "light"}>
+//     {/* if ternary operator , if loading is true run <cliploader>
+// else run <router>*/}
+//     {loading ? (
+//       <div className="loader">
+//         <PropagateLoader size={15} color={"#24248f"} loading={loading} />
+//       </div>
+//     ) : (
+//       <div>
+      <Router >
         
         <Navbar />
          <Scrolltotop />
@@ -59,8 +59,8 @@ else run <router>*/}
         <Footer />
       </Router>
      
-      </div>  )}
-        </section>
+      // </div>  )}
+      //   </section>
       );
   
 }
