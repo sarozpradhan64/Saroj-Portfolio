@@ -58,17 +58,18 @@ ul {
   padding: 15px 30px 15px 30px;
   margin-top: 30px;
   border-radius: 20px;
-
-  color:black;
-  border:2px solid #24248f ;
-  cursor:pointer;
+background: none;
+  color: black;
+  border: 2px solid #24248f;
+  cursor: pointer;
   transition: 0.5s ease-out;
 }
-.home_button:hover{
-  background: linear-gradient(to left,#c0b7e9,#2f347a, #0d1146);
-  color:white;
-  border:2px solid white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+.home_button:hover {
+  background: linear-gradient(to left, #c0b7e9, #2f347a, #0d1146);
+  color: white;
+  border: 2px solid white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .home_image {
   flex: 50%;
@@ -82,7 +83,7 @@ ul {
   flex-direction: row;
   text-align: center;
   justify-content: center;
-  border:2px solid black;
+  border: 2px solid black;
 }
 
 .about_image {
@@ -99,7 +100,7 @@ ul {
 }
 .about_detail {
   flex: 50%;
-  border:2px solid black;
+  border: 2px solid black;
 }
 .about_detail p {
   text-align: left;
@@ -119,13 +120,13 @@ ul {
   border-radius:  10px;
   transition: all 0.5sec ease-out;
 } */
-.profession{
-  display:grid;
-  grid-template-columns:auto auto auto;
+.profession {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-.profession li{
-  display:block;
-  border:2px solid black;
+.profession li {
+  display: block;
+  border: 2px solid black;
 }
 .resume {
   border: none;
