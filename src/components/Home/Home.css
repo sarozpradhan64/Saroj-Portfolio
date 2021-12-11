@@ -82,6 +82,7 @@ ul {
   flex-direction: row;
   text-align: center;
   justify-content: center;
+  border:2px solid black;
 }
 
 .about_image {
@@ -98,13 +99,14 @@ ul {
 }
 .about_detail {
   flex: 50%;
+  border:2px solid black;
 }
 .about_detail p {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 50px;
   font-size: 18px;
-  padding: 0px 100px 0px 100px;
+  padding: 0px 80px 0px 80px;
 }
 /* .resume:before{
   content: "view";
@@ -117,6 +119,14 @@ ul {
   border-radius:  10px;
   transition: all 0.5sec ease-out;
 } */
+.profession{
+  display:grid;
+  grid-template-columns:auto auto auto;
+}
+.profession li{
+  display:block;
+  border:2px solid black;
+}
 .resume {
   border: none;
   margin-top: 20px;

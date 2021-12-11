@@ -46,10 +46,10 @@ function Home() {
         <div className="about_detail">
           <h1>About me</h1>
           <p>{profiledata.about}</p>
-          <ul>
+          <ul class="profession">
             <li>Web Developer</li>
             <li>Programmer/Coder</li>
-            <li>Student/Teacher(part-time)</li>
+            <li>Computer Instructor</li>
           </ul>
           <button type="button" className="resume">
             <a href={profiledata.resume} target="_blank">
