@@ -28,7 +28,7 @@ function Home() {
 </Helmet>
         <div className="intro">
           <h1>Hi! I'm </h1>
-          <h1>Saroj Pradhan</h1>
+          <h1 className="saroj">Saroj Pradhan</h1>
 
           <ul>
             <li>Web Developer</li>

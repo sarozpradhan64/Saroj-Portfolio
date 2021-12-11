@@ -46,9 +46,9 @@ function Navbar() {
           Blogs</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink exact to="/gallery" activeClassName="active" 
+        <NavLink exact to="/contact" activeClassName="active" 
         className="nav-links" onClick={handleClick}>
-          Gallery</NavLink>
+          Contact</NavLink>
       </li>
     </ul>
 
