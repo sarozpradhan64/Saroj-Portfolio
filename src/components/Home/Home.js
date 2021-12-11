@@ -30,11 +30,8 @@ function Home() {
           <h1>Hi! I'm </h1>
           <h1 className="saroj">Saroj Pradhan</h1>
 
-          <ul>
-            <li>Web Developer</li>
-            <li>Programmer/Coder</li>
-            <li>Student/Teacher(part-time)</li>
-          </ul>
+        <button className="home_button">About me</button>
+
         </div>
         <div className="home_image">
           <img src={home}></img>
@@ -49,6 +46,11 @@ function Home() {
         <div className="about_detail">
           <h1>About me</h1>
           <p>{profiledata.about}</p>
+          <ul>
+            <li>Web Developer</li>
+            <li>Programmer/Coder</li>
+            <li>Student/Teacher(part-time)</li>
+          </ul>
           <button type="button" className="resume">
             <a href={profiledata.resume} target="_blank">
               Resume
