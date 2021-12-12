@@ -50,9 +50,9 @@ function Home() {
           <h1>About me</h1>
           <p>{profiledata.about}</p>
           <ul class="profession">
-            <li> <img src={web}/>Web Developer</li>
-            <li> <img src={code}/>Programmer/Coder</li>
-            <li> <img src={instruct}/>Computer Instructor</li>
+            <li> <img class="pro_img" src={web}/><h4 class="img_tags">Web Developer</h4></li>
+            <li> <img class="pro_img" src={code}/><h4 class="img_tags">Programmer/Coder</h4></li>
+            <li> <img class="pro_img" src={instruct}/><h4 class="img_tags">Computer Instructor</h4></li>
           </ul>
           <button type="button" className="resume">
             <a href={profiledata.resume} target="_blank">

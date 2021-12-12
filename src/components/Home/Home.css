@@ -74,8 +74,14 @@ ul {
 .home_image {
   flex: 50%;
   justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.home_image img {
+  width: 80%;
+  display: block;
+}
 /* About section------------------------------------- */
 .about {
   margin-top: 200px;
@@ -83,7 +89,6 @@ ul {
   flex-direction: row;
   text-align: center;
   justify-content: center;
-  
 }
 
 .about_image {
@@ -100,7 +105,6 @@ ul {
 }
 .about_detail {
   flex: 50%;
-  
 }
 .about_detail p {
   text-align: left;
@@ -131,15 +135,33 @@ ul {
   height: 120px;
   width: 150px;
   margin: 20px;
-  padding:5px;
+  padding: 5px;
   border-radius: 10px;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  position: relative;
+  transition: 2s ease;
 }
-.profession li img{
-  width:100%;
+.profession li img {
+  width: 100%;
   height: 100%;
-  border-radius:5px;
-} 
+  border-radius: 5px;
+}
+.profession li:hover .img_tags {
+  opacity: 1;
+}
+.profession li:hover .pro_img {
+  opacity: 0.3;
+}
+.img_tags {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+}
 .resume {
   border: none;
   margin-top: 20px;
@@ -166,6 +188,7 @@ ul {
   .home_image {
     margin-top: 150px;
   }
+
   .intro {
     margin: 0;
     text-align: center;
