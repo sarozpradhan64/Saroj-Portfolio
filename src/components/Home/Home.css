@@ -64,6 +64,10 @@ ul {
   cursor: pointer;
   transition: 0.5s ease-out;
 }
+.home_button a{
+  color:inherit;
+  text-decoration: none;
+}
 .home_button:hover {
   background: linear-gradient(to left, #c0b7e9, #2f347a, #0d1146);
   color: white;

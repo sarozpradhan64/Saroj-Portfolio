@@ -7,6 +7,7 @@ import code from "./home_img/code.jpg"
 import "./Home.css";
 import home2 from "./Home2.svg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [profiledata, setProfiledata] = useState([]);
@@ -33,7 +34,7 @@ function Home() {
           <h1>Hi! I'm </h1>
           <h1 className="saroj">Saroj Pradhan</h1>
 
-        <button className="home_button">About me</button>
+        <button className="home_button"><a href="#link_about"> About me</a></button>
 
         </div>
         <div className="home_image">
@@ -41,7 +42,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="about">
+      <div className="about" id="link_about" >
         <div className="about_image">
           <img src={home2}></img>
         </div>

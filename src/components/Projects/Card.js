@@ -20,12 +20,11 @@ const listitems = arr.map((val) =>
         </div>
         
         <div className="card_body">
-            <h2>{props.name}</h2>
+            <h3>{props.name}</h3>
             <ul>{listitems}</ul>
             <div className="link">
             <a href={props.link}><i class="fas fa-link"></i></a>
             </div>
-
         </div>
 
         

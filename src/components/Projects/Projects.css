@@ -5,6 +5,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
   width: 250px;
+  height: 250px;
   transition: 0.5s ease;
 }
 .card_image {
@@ -19,9 +20,8 @@
 }
 
 .card_body {
-  padding: 10px;
-  height: 220px;
-  line-break: loose;
+  padding-left: 10px;
+  position: relative;
 }
 .link:before {
   content: "view";
@@ -29,15 +29,30 @@
   color: white;
   background-color: rgb(160, 156, 156);
   font-size: 20px;
-  margin-right: 5px;
+  right:30px;
   padding: 5px;
   border-radius: 10px;
+  position: absolute;
 }
 .link {
-  font-size: 25px;
-  margin-right: 10px;
-  margin-top: 300px;
+  position: absolute;
+  font-size: 20px;
+  top: -45px;
+  right: 10px;
   text-decoration: none;
+  color:inherit;
+  background-color:black;
+  border-radius:10px;
+  padding:1px 5px 2px 5px;
+}
+.link i{
+  font-size:20px;
+  padding:0;
+  margin:0;
+}
+.link a{
+  padding:0;
+  margin:0
 }
 .link:hover:before {
   display: inline;
@@ -53,9 +68,9 @@
 
 /* ---------------project section------------------- */
 
-.project_main{
-min-height: 100vh;
- margin-bottom: 100px;
+.project_main {
+  min-height: 100vh;
+  margin-bottom: 100px;
 }
 .project_intro {
   text-align: center;
@@ -81,6 +96,4 @@ min-height: 100vh;
     justify-content: center;
     align-items: center;
   }
-
- 
 }
