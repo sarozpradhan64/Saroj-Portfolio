@@ -40,16 +40,14 @@ function Category(props) {
     blogs.map((blogPost) => {
       return list.push(
         <div className="blog"> 
-          <p>{capitalizeFirstLetter(blogPost.category)}</p>
+          
           <img
-            
+           
             src={`https://blazesrz.pythonanywhere.com/${blogPost.thumbnail}`}  /* because when doing console.log(blogs), it only recieved /django-summernote */
           
-          />
-          <h3>{blogPost.title}</h3>
-          <p>{blogPost.month}</p>
-          <p>{blogPost.excerpt}</p>
-          <Link to={`/blog/${blogPost.slug}`} className="readmore">
+          /><p className="category">{capitalizeFirstLetter(blogPost.category)}</p>
+          <h3 className="blog_title">{blogPost.title}</h3>
+          <Link to={`/blog/${blogPost.slug}`} className="blog_readmore">
             Read more
           </Link>
        
