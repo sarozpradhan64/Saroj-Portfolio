@@ -23,7 +23,7 @@ const listitems = arr.map((val) =>
             <h3>{props.name}</h3>
             <ul>{listitems}</ul>
             <div className="link">
-            <a href={props.link}><i class="fas fa-link"></i></a>
+            <a href={props.link} target="_blank"><i class="fas fa-link"></i></a>
             </div>
         </div>
 

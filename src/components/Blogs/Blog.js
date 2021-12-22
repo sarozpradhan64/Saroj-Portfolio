@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import {Helmet} from "react-helmet"
+import { Helmet } from "react-helmet";
 
 import axios from "axios";
 import "./blog.css";
@@ -14,10 +14,11 @@ function Blog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://blazesrz.pythonanywhere.com/api/blog/featured");
-        console.log(res.data[0])
+        const res = await axios.get(
+          "https://blazesrz.pythonanywhere.com/api/blog/featured"
+        );
+        console.log(res.data[0]);
         setFeaturedBlog(res.data[0]);
-      
       } catch (err) {}
     };
     fetchData();
@@ -27,8 +28,10 @@ function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("https://blazesrz.pythonanywhere.com/api/blog/");
-        
+        const res = await axios.get(
+          "https://blazesrz.pythonanywhere.com/api/blog/"
+        );
+
         setBlogs(res.data); /* data is default object of json  */
       } catch (err) {}
     };
@@ -43,7 +46,7 @@ function Blog() {
   };
 
   const Truncate = (word) => {
-    if (word) return word.slice(0, 10) ;
+    if (word) return word.slice(0, 10);
   };
 
   /*   loopfunction for all the blogs */
@@ -59,11 +62,9 @@ function Blog() {
             <img src={blogPost.thumbnail} alt="thumbnail" />
           </div>
           <div className="">
-            <i className="">{capitalizeFirstLetter(blogPost.category)}</i>
-            <h3 style={{ marginTop: "10px" }}>{blogPost.title}</h3>
-            <p className="excerpt">Updated on: {Truncate (blogPost.updated)}</p>
-            <p style={{ marginTop: "20px" }}>{blogPost.excerpt}</p>
-            <NavLink to={`/blog/${blogPost.slug}`} className="readmore">
+            <i className="category">{capitalizeFirstLetter(blogPost.category)}</i>
+            <h3 className="blog_title">{blogPost.title}</h3>
+            <NavLink to={`/blog/${blogPost.slug}`} className="blog_readmore">
               Read more
             </NavLink>
           </div>
@@ -93,10 +94,9 @@ function Blog() {
 
   return (
     <div className="blog_container">
-     
-<Helmet>
-  <title>Saroj | Blogs</title>
-</Helmet>
+      <Helmet>
+        <title>Saroj | Blogs</title>
+      </Helmet>
       <nav className="blog_nav">
         <NavLink
           activeClassName="blog_active"
@@ -129,17 +129,17 @@ function Blog() {
         </NavLink>
       </nav>
 
-      <h2 className="featured_heading">Featured Blog</h2>
       <div className="featured">
-        <img style={{ marginTop: "10px" }} src={featuredBlog.thumbnail} />
-        <i className="">{capitalizeFirstLetter(featuredBlog.category)}</i>
+        <div className="featured_heading">Featured</div>
+        <img src={featuredBlog.thumbnail} />
+        <i className="category">
+          {capitalizeFirstLetter(featuredBlog.category)}
+        </i>
         <div className="featured_title">
-
-          <h1 style={{  marginTop: "10px" }}>
-            {featuredBlog.title}
-          </h1>
-          <p className="excerpt">Updated on: {Truncate (featuredBlog.updated)}</p>
-          <p style={{ marginTop: "10px" }}>{featuredBlog.excerpt}</p>
+          <Link to={`/blog/${featuredBlog.slug}`} className="featured_link">
+            
+            <h2>{featuredBlog.title}</h2>
+          </Link>
           <Link to={`/blog/${featuredBlog.slug}`} className="readmore">
             Read more
           </Link>
@@ -147,7 +147,7 @@ function Blog() {
       </div>
 
       <div className="blog_heading">
-        <h2>All blogs</h2>
+        <h1>All blogs</h1>
       </div>
       <div className="blog_list">{getBlogs()}</div>
     </div>

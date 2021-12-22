@@ -15,7 +15,7 @@
 
 .blog_link {
   text-decoration: none;
-  color:black;
+  color: black;
   margin: 10px;
 }
 .blog_active {
@@ -27,32 +27,52 @@
 /* featured post------------------------------------------ */
 .featured {
   display: flex;
-  width: 700px;
-
+  width: 35%;
+  height: 380px;
+  position: relative;
   flex-direction: column;
   margin-top: 20px;
   margin-left: 60px;
   margin-right: 60px;
-  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 .featured img {
   width: 100%;
-  border:none;
-  height: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: auto;
 }
 .featured_heading {
-  margin-left: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 230, 0);
+  padding: 3px 7px 3px 7px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: rgb(19, 19, 39);
+  border-radius: 3px;
 }
-.excerpt {
+.category {
   color: grey;
   font-size: 15px;
 }
-
+.featured_link {
+  color: rgb(19, 19, 39);
+  text-decoration: none;
+}
+/* both featured and blog margin */
+.category,
+.featured_title, .blog_title, .blog_readmore {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .readmore {
+  position: absolute;
+  bottom: 5px;
   font-size: 10;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 85px;
   display: flex;
   text-align: center;
@@ -68,17 +88,16 @@
 
 .blog_heading {
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
-
+  /* blog card---------------------- */
 .blog {
   display: flex;
   flex-direction: column;
-  /* blog card---------------------- */
-  padding: 10px;
-  width: 400px;
-  min-height: 470px;
+  position: relative;
+  width: 350px;
+  min-height: 330px;
   /* margin-right: 20px;
     margin-left: 20px;
     margin-top:20px;
@@ -90,7 +109,26 @@
 }
 .blog img {
   width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   height: auto;
+}
+.blog_readmore{
+  position: absolute;
+  bottom: 5px;
+  font-size: 10;
+  margin-top: 10px;
+  width: 85px;
+  display: flex;
+  text-align: center;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #24248f;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }
 .blog:hover {
   transform: scale(1.02);
@@ -98,8 +136,10 @@
 }
 
 .blog_list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-left: 30px;
+  padding-right: 30px;
 
   width: 100%;
   align-items: center;
@@ -109,9 +149,6 @@
     border:2px solid blue;
    
 } */
-.blog_list > * {
-  flex: 0 0 0 160px;
-}
 
 /* -------------------------blog details------------ */
 

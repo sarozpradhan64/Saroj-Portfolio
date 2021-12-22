@@ -41,7 +41,7 @@
   right: 10px;
   text-decoration: none;
   color:inherit;
-  background-color:black;
+  background-color: #24248f;;
   border-radius:10px;
   padding:1px 5px 2px 5px;
 }
@@ -52,7 +52,8 @@
 }
 .link a{
   padding:0;
-  margin:0
+  margin:0;
+  color:white;
 }
 .link:hover:before {
   display: inline;
