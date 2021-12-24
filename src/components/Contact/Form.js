@@ -21,7 +21,7 @@ function Form() {
   }
   return (
     <div className="form_container">
-      <form ref={form} onSubmit={sendEmail} className="contact-form" action="/success" method="post">
+      <form ref={form} onSubmit={sendEmail} className="contact-form" action="/success" >
         <h2 className="form_title">Send me a Message</h2>
         <input type="hidden" name="contact_number" />
         <div hidden>
