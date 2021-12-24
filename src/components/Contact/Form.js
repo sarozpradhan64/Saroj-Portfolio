@@ -8,7 +8,7 @@ function Form() {
   const form = useRef();
 
   function sendEmail(e) {
-   e.preventDefault();
+ 
     emailjs.sendForm("gmail", "template_94vaouj", form.current, "user_62jnS4jHOrdWu9kznFXvX")
       .then(
         (result) => {
