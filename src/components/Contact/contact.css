@@ -1,28 +1,27 @@
 .form_container {
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  width: 100%;
   min-height: 100vh;
   justify-content: center;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 500px;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  padding:20px 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
-
+.form_title{
+  margin-bottom: 20px;
+}
 .input {
   font-size: 18px;
-  margin: 10px;
-  width: 400px;
-  height: 80px;
+  margin-bottom: 10px;
+  width: 350px;
+  height: 50px;
   padding-left: 5px;
   border: 2px solid #24248f;
   border-radius: 5px;
@@ -36,19 +35,16 @@
   box-shadow: 0 0 0 2px #24248f;
 }
 .submit {
-  width: 100px;
-  margin-bottom: 50px;
   transition: 0.5s ease-out;
-  height: 50px;
   border: 2px solid #24248f;
   border-radius: 5px;
   outline: none;
+  padding:10px 20px 10px 20px;
   background-color: white;
 }
 .submit:hover {
   background-color: #24248f;
   color: white;
-  width: 100px;
 }
 textarea:focus {
   border: none;
@@ -69,8 +65,8 @@ textarea:focus {
 textarea {
   font-size: 18px;
   margin: 10px;
-  width: 400px;
-  height: 200px; /*  seperate because of height */
+  width: 350px;
+  height: 150px; /*  seperate because of height */
   padding-left: 5px;
   border: 2px solid #24248f;
   border-radius: 5px;
