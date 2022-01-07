@@ -12,11 +12,6 @@ function Footer(props) {
   return (
     <div className="footer">
       <div className="footer_menu">
-        <div className="settings">
-          settings
-        
-          
-        </div>
         <ul className="social_media">
           <li className="footer_links">
             <a
@@ -46,16 +41,6 @@ function Footer(props) {
             </a>
           </li>
         </ul>
-        <div className="contact_button">
-          <NavLink
-            exact
-            to="/contact"
-            activeClassName="active"
-            className="contact_link"
-          >
-            Contact
-          </NavLink>
-        </div>
       </div>
     
     </div>
