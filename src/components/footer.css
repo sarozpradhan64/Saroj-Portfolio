@@ -1,6 +1,7 @@
 .footer {
   margin-top: 150px;
-
+padding:1rem;
+position: relative;
 
 }
 .light {
@@ -114,12 +115,12 @@ input:checked + .slider:before {
   font-size: 30px;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-start;
 }
 
 .footer_links i {
   color: black;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 5px 0px 5px;
 }
 
 .contact_button {
@@ -138,4 +139,10 @@ input:checked + .slider:before {
   text-decoration: none;
   align-self: right;
   padding-right: 20px;
+}
+.heart{
+  font-size: .8rem;
+  position: absolute;
+  bottom:.5rem;
+  right:1rem;
 }

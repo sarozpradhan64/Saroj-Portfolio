@@ -40,8 +40,11 @@ function Footer(props) {
               <i class="fab fa-github-square"></i>
             </a>
           </li>
+          <p className="heart">Made with🖤Saroj</p>
         </ul>
+        
       </div>
+     
     
     </div>
   );
